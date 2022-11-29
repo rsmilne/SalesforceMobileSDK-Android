@@ -275,12 +275,12 @@ public abstract class SalesforceReactActivity extends ReactActivity implements S
 
     private boolean shouldAskOverlayPermission() {
         if (SalesforceReactActivity.this.getReactNativeHost().getReactInstanceManager().getDevSupportManager().getDevSupportEnabled()) {
-            if (!Settings.canDrawOverlays(this)) {
-                showPermissionWarning();
-                return true;
-            } else {
+            // if (!Settings.canDrawOverlays(this)) {
+            //     showPermissionWarning();
+            //     return true;
+            // } else {
                 hidePermissionWarning();
-            }
+            // }
         }
         return false;
     }
